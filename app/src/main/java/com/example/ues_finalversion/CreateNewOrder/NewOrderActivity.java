@@ -77,6 +77,7 @@ public class NewOrderActivity extends AppCompatActivity {
         //Connect Firebase to the project
 
         //ChatBranch
+          //Add message List
 
 
 
