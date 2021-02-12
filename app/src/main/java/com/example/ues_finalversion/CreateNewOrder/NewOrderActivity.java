@@ -65,6 +65,7 @@ public class NewOrderActivity extends AppCompatActivity {
     private ChildEventListener userChildEventListener;
     private FirebaseAuth mAuth;
     private Dialog dialogOrder;
+    private  String hello;
 
 
 
