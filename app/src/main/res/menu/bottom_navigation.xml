@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Order"
+        android:title="Заказы"
+        android:icon="@drawable/ic_view_list_24"/>
+    <item
+        android:id="@+id/NewOrder"
+        android:title="Новый Заказ"
+        android:icon="@drawable/ic_add_circle_outline_24"/>
+    <item
+        android:id="@+id/chat"
+        android:title="Чат"
+        android:icon="@drawable/ic_baseline_chat_24"/>
+    <item
+        android:id="@+id/Profile"
+        android:title="Профиль"
+        android:icon="@drawable/ic_account_circle_24"/>
+
+</menu>

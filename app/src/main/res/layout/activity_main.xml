@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/MainframeContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:foregroundGravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/radioGroup"
+        android:layout_height="600dp"
+        android:background="@color/white">
+        <ListView
+            android:id="@+id/ListViewActiv"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="600dp"/>
+        <ListView
+            android:id="@+id/ListViewEnded"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"/>
+
+        <TextView
+            android:id="@+id/ListText"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Пока нечего нет!">
+        </TextView>
+
+
+
+
+
+
+
+
+    </FrameLayout>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_Walk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_weight="1"
+            android:selectAllOnFocus="true"
+            android:fontFamily="sans-serif-light"
+            android:text="Активные заявки"
+            android:onClick="activOrders"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/radio_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:fontFamily="sans-serif-light"
+            android:onClick="endedOrders"
+            android:text="Завершенные"
+            android:textSize="20sp"
+            />
+    </RadioGroup>
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/container"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:itemIconTint="@color/white"
+            android:clickable="true"
+            app:itemBackground="@color/purple_500"
+            app:itemTextColor="@color/black"
+
+            app:menu="@menu/bottom_navigation" />
+
+    </FrameLayout>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateNewOrder.checkOrderActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/nameCheckUser"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Имя: "
+            android:fontFamily="sans-serif-light"
+            android:textSize="25sp" >
+        </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="190dp">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lotteAnimation"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+         android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/succes2">
+
+    </com.airbnb.lottie.LottieAnimationView>
+    <TextView
+android:layout_marginTop="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_500"
+        android:text="Заявка успешно Создана:"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textSize="25sp" >
+    </TextView>
+</FrameLayout>
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Оплата:  "
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+        <TextView
+            android:id="@+id/paymentCheckText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оплата Наличными"
+            android:gravity="right"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/priceCheckText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" / Цена: 1500 ₽"
+            android:layout_gravity="left"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/rectangle2"/>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Детали Заказа:"
+        android:fontFamily="sans-serif-light"
+        android:textSize="25sp" >
+    </TextView>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Точка Старта:"
+        android:fontFamily="sans-serif-light"
+        android:textSize="15sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/address1CheckText"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="Маршала Тухачевского 18"
+
+        android:drawableLeft="@drawable/ic_my_location_custom"
+        android:fontFamily="sans-serif-light"
+        android:textSize="20sp" >
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/time1CheckText"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14:30"
+            android:drawableLeft="@drawable/ic_access_time_custom"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/date1CheckText"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13.01.21"
+            android:drawableLeft="@drawable/ic_custom_add_photo_alternate_24"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/comment1CheckText"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="заходит со стороны шоссе"
+
+        android:drawableLeft="@drawable/ic_comment_custom"
+        android:fontFamily="sans-serif-light"
+        android:textSize="20sp" >
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/onFootCheckText"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пешком"
+            android:drawableLeft="@drawable/ic_baseline_directions_run_24"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/weightFootCheckText"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="до 10 кг"
+            android:drawableLeft="@drawable/ic_baseline_shopping_bag_24"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/onAutoCheckText"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="На машине"
+            android:drawableLeft="@drawable/ic_baseline_directions_car_24"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/weightAutoCheckText"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="до 100 кг"
+            android:visibility="gone"
+            android:drawableLeft="@drawable/ic_baseline_shopping_bag_24"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/WhatsTakingCheckText"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Документы"
+        android:drawableLeft="@drawable/ic_baseline_done_outline_24"
+        android:fontFamily="sans-serif-light"
+        android:textSize="20sp" >
+    </TextView>
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:layout_gravity="left"
+        android:background="@drawable/rectangle2"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Точка отправки:"
+        android:fontFamily="sans-serif-light"
+        android:textSize="15sp" >
+    </TextView>
+    <TextView
+        android:id="@+id/address2CheckText"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="Маршала Тухачевского 18"
+        android:drawableLeft="@drawable/ic_my_location_custom"
+        android:fontFamily="sans-serif-light"
+        android:textSize="20sp" >
+    </TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/time2CheckText"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="14:30"
+            android:drawableLeft="@drawable/ic_access_time_custom"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/date2CheckText"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13.01.21"
+
+            android:drawableLeft="@drawable/ic_custom_add_photo_alternate_24"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+    </LinearLayout>
+        <TextView
+            android:id="@+id/comment2CheckText"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:text="заходит со стороны шоссе"
+
+            android:drawableLeft="@drawable/ic_comment_custom"
+            android:fontFamily="sans-serif-light"
+            android:textSize="20sp" >
+        </TextView>
+       <Button
+
+           android:layout_marginTop="10dp"
+           android:id="@+id/continueButton"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Продолжить">
+
+       </Button>
+
+    </LinearLayout>
+
+</ScrollView>

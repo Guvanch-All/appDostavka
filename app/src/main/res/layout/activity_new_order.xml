@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:scrollbars="none"
+    tools:context=".CreateNewOrder.NewOrderActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-57dp"
+        tools:layout_editor_absoluteY="146dp">
+        <TextView
+            android:id="@+id/userNameOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Relative"
+            android:layout_centerInParent="true"
+            android:text="Имя"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <RelativeLayout
+                android:id="@+id/Relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_Walk"
+                        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/holo_green_light"
+                        android:drawableEnd="@drawable/ic_baseline_directions_run_24"
+                        android:onClick="onFootButton"
+
+                        android:selectAllOnFocus="true"
+                        android:text="Пешком" />
+
+                    <RadioButton
+                        android:id="@+id/radio_auto"
+                        style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/holo_green_light"
+                        android:drawableEnd="@drawable/ic_baseline_directions_car_24"
+                        android:onClick="autoButton"
+                        android:text="Авто" />
+                </RadioGroup>
+
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:backgroundTint="#7E987E"
+                    android:entries="@array/onFoot"
+                    android:scrollbarFadeDuration="12"
+                    android:visibility="invisible">
+
+                </Spinner>
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:backgroundTint="#7E987E"
+                    android:entries="@array/onAuto"
+                    android:visibility="invisible">
+
+                </Spinner>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Relative"
+                android:layout_centerInParent="true"
+                android:text="Деиствие"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_where_to_vote_24"
+                    android:fontFamily="sans-serif-thin"
+                    android:text=" Откуда"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/adressFromWhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_my_location_custom"
+                    android:drawablePadding="12dp"
+                    android:hint="Адрес"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/timeFromWhere"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableStart="@drawable/ic_access_time_custom"
+                        android:drawablePadding="12dp"
+                        android:hint="В какое время?"
+                        android:inputType="time"
+
+                        android:paddingStart="30dp"
+                        android:paddingEnd="12dp"
+                        app:met_mask="##:##" />
+
+                    <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/dateFromWhere"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableStart="@drawable/ic_custom_add_photo_alternate_24"
+                        android:drawablePadding="12dp"
+                        android:hint="дата"
+                        android:inputType="date"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        app:met_mask="##.##.##" />
+
+
+                </LinearLayout>
+
+                <com.santalu.maskedittext.MaskEditText
+                    android:id="@+id/phoneFromWhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_phone_custom"
+                    android:drawablePadding="12dp"
+                    android:hint="+7("
+                    android:inputType="phone"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="12dp"
+                    app:met_mask="+7(###) ### #### " />
+
+                <EditText
+                    android:id="@+id/commentFromWhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_comment_custom"
+                    android:drawablePadding="12dp"
+                    android:hint="кв.дом "
+                    android:inputType="textAutoComplete"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="12dp" />
+
+                <ImageView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/rectangle2">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_where_to_vote_24"
+                    android:fontFamily="sans-serif-thin"
+                    android:text=" Куда"
+                    android:textSize="25dp" />
+
+                <EditText
+
+                    android:id="@+id/adressInWhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_my_location_custom"
+                    android:drawablePadding="12dp"
+                    android:hint="Адрес"
+                    android:inputType="textPostalAddress"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/timeInWhere"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableStart="@drawable/ic_access_time_custom"
+                        android:drawablePadding="12dp"
+                        android:hint="В какое время?"
+                        android:inputType="time"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="12dp"
+                        app:met_mask="##:##" />
+
+                    <com.santalu.maskedittext.MaskEditText
+                        android:id="@+id/dateInWhere"
+                        android:layout_width="200dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_input"
+                        android:drawableStart="@drawable/ic_custom_add_photo_alternate_24"
+                        android:drawablePadding="12dp"
+                        android:hint="Дата"
+                        android:inputType="date"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        app:met_mask="##.##.##" />
+
+
+                </LinearLayout>
+
+                <com.santalu.maskedittext.MaskEditText
+                    android:id="@+id/phoneInWhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_phone_custom"
+                    android:drawablePadding="12dp"
+                    android:hint="+7("
+                    android:inputType="phone"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="12dp"
+                    app:met_mask="+7(###) ### #### " />
+
+                <EditText
+                    android:id="@+id/commentInWhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/ic_comment_custom"
+                    android:drawablePadding="12dp"
+                    android:hint="кв.дом "
+                    android:inputType="textAutoComplete"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="12dp" />
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioGroup
+                                android:id="@+id/radioGroup2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/documentRadiobutton"
+                                    style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@android:color/holo_green_light"
+                                    android:onClick="documents"
+                                    android:selectAllOnFocus="true"
+                                    android:text="Документы" />
+
+                                <RadioButton
+                                    android:id="@+id/flowerRadiobutton"
+                                    style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@android:color/holo_green_light"
+                                    android:text="Цветы" />
+
+                                <RadioButton
+                                    android:id="@+id/giftRadiobutton"
+                                    style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@android:color/holo_green_light"
+                                    android:text="Подарок" />
+
+                                <RadioButton
+                                    android:id="@+id/hotFoodRadiobutton"
+                                    style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="24dp"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@android:color/holo_green_light"
+                                    android:text="Горячая еда" />
+
+                            </RadioGroup>
+
+                        </HorizontalScrollView>
+
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+                <RadioGroup
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/payWithCard"
+                        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_custom"
+                        android:button="@android:color/transparent"
+                        android:padding="16dp"
+                        android:textColor="@drawable/radio_text_custom"
+                        android:drawableRight="@drawable/ic_baseline_credit_card_24"
+                        android:selectAllOnFocus="true"
+                        android:text="Оплата Картой" />
+
+                    <RadioButton
+                        android:id="@+id/payWithCash"
+                        style="@android:style/Widget.Holo.CompoundButton.RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_custom"
+                        android:button="@android:color/transparent"
+                        android:padding="16dp"
+                        android:textColor="@drawable/radio_text_custom"
+                        android:drawableRight="@drawable/ic_baseline_credit_card_off_24"
+                        android:text="Оплата Наличными" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-thin"
+                android:text="150 ₽"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/nextbutton009"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Создать Заявку" />
+
+    </LinearLayout>
+
+
+</ScrollView>

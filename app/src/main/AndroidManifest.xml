@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ues_finalversion" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UES_FinalVersion"
+        >
+        <activity android:name=".CreateNewOrder.checkOrderActivity" >
+        </activity>
+        <activity android:name=".CreateNewOrder.OrderActivity" />
+        <activity android:name=".CreateNewOrder.SignInActivity" />
+        <activity android:name=".ChatActivites.MainChatActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AccountProfie.ProfileActivity" />
+        <activity android:name=".CreateNewOrder.NewOrderActivity" />
+        <activity android:name=".ChatActivites.ChatActivity" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/SplashScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
