@@ -65,7 +65,6 @@ public class NewOrderActivity extends AppCompatActivity {
     private ChildEventListener userChildEventListener;
     private FirebaseAuth mAuth;
     private Dialog dialogOrder;
-    private  String hello;
 
 
 
@@ -74,12 +73,6 @@ public class NewOrderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_order);
         setTitle("Создать заякву");
-        //Connect Firebase to the project
-
-        //ChatBranch
-          //Add message List
-
-
 
         database = FirebaseDatabase.getInstance();//Получаем доступ к корневлй папке базе данных
         orderSenderReference = database.getReference().child("Order");//Создаем узел в корневую папку куда записивать данные
